@@ -1,0 +1,98 @@
+html {
+	font-family: 'Lexend Deca', sans-serif;
+}
+
+.resume {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-areas:
+		"contact"
+		"name"
+		"about"
+		"skills"
+		"work"
+		"projects"
+		"education"
+		"community"
+		"organizations";
+	grid-gap: 5px;
+}
+
+.grid-area {
+	padding: 1em 1em 1em 1em;
+	border: 1px black solid;
+}
+
+.wrapper {
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.circle {
+	border: 1px solid black;
+	height: 150px;
+	width: 150px;
+	border-radius: 50%;
+	align-items: center;
+}
+
+.name {
+	grid-area: name;
+	text-align: center;
+}
+
+.contact {
+	grid-area: contact;
+}
+.about {
+	grid-area: about;
+}
+.projects {
+	grid-area: projects;
+}
+.skills {
+	grid-area: skills;
+}
+.work {
+	grid-area: work;
+}
+.education {
+	grid-area: education;
+}
+.community {
+	grid-area: community;
+}
+.organizations {
+	grid-area: organizations;
+}
+
+@media (min-width: 1200px) {
+	.resume {
+		display: grid;
+		grid-template-columns: 2fr 1fr;
+		grid-template-rows: 1fr 1fr 1fr 1fr;
+		grid-template-areas: 
+			"contact skills"
+			"name work"
+			"about work"
+			"education projects"
+			"organizations community";
+	}
+}
+
+@media (min-width: 900px) {
+	.resume {
+		grid-template-columns: 2fr 1fr;
+		grid-template-areas:
+			"name contact"
+			"about about"
+			"skills skills"
+			"work work"
+			"projects projects"
+			"education education"
+			"community community"
+			"organizations organizations";
+	}
+}
